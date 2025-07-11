@@ -32,14 +32,20 @@
 
         //Realizar la suma
         $resultado =$num1 + $num2;
+
         $resultado =$num1 - $num2;
+
         $resultado =$num1 * $num2;
+        
         $resultado =$num1 / $num2;
 
         //Mostrar el resultado
         echo "<h3>El resultado de la suma es: $resultado</h3>";
+
          echo "<h3>El resultado de la resta es: $resultado</h3>";
+
           echo "<h3>El resultado de la multiplicacion es: $resultado</h3>";
+
            echo "<h3>El resultado de la division es: $resultado</h3>";
     
     }
