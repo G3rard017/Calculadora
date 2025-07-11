@@ -23,18 +23,18 @@
 
     <?php
     if (isset($_POST['sumar'])) {
-         if (isset($_POST['restar'])) {
-             if (isset($_POST['multiplicar'])) {
-                 if (isset($_POST['dividir'])) {
+    if (isset($_POST['restar'])) 
+    if (isset($_POST['multiplicar'])) 
+    if (isset($_POST['dividir']))
         // Obtener los valores de los campos del formulario
         $num1 = $_POST['num1'];
         $num2 = $_POST['num2'];
 
         //Realizar la suma
         $resultado =$num1 + $num2;
-         $resultado =$num1 - $num2;
-          $resultado =$num1 * $num2;
-           $resultado =$num1 / $num2;
+        $resultado =$num1 - $num2;
+        $resultado =$num1 * $num2;
+        $resultado =$num1 / $num2;
 
         //Mostrar el resultado
         echo "<h3>El resultado de la suma es: $resultado</h3>";
