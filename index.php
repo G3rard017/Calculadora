@@ -15,38 +15,55 @@
         <input type="number"name="num2"required><br><br>
 
         <input type="submit"name="sumar" value="Sumar">
+
         <input type="submit"name="restar" value="Restar">
+
         <input type="submit"name="multiplicar" value="Multiplicar">
+
         <input type="submit"name="dividir" value="Dividir">
 
     </form>
 
     <?php
     if (isset($_POST['sumar'])) {
+
     if (isset($_POST['restar'])) 
+
     if (isset($_POST['multiplicar'])) 
+
     if (isset($_POST['dividir']))
+
         // Obtener los valores de los campos del formulario
         $num1 = $_POST['num1'];
         $num2 = $_POST['num2'];
 
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+
+
         //Realizar la suma
-        $resultado =$num1 + $num2;
+        $suma=$num1 + $num2;
 
-        $resultado =$num1 - $num2;
+        $resta =$num1 - $num2;
 
-        $resultado =$num1 * $num2;
-        
-        $resultado =$num1 / $num2;
+        $multiplicacion =$num1 * $num2;
+
+        $division=$num1 / $num2;
 
         //Mostrar el resultado
-        echo "<h3>El resultado de la suma es: $resultado</h3>";
+        echo "<h3>El resultado de la suma es: $sumar</h3>";
 
-         echo "<h3>El resultado de la resta es: $resultado</h3>";
+         echo "<h3>El resultado de la resta es: $restar</h3>";
 
-          echo "<h3>El resultado de la multiplicacion es: $resultado</h3>";
+          echo "<h3>El resultado de la multiplicacion es: $multiplicar</h3>";
 
-           echo "<h3>El resultado de la division es: $resultado</h3>";
+           echo "<h3>El resultado de la division es: $dividir</h3>";
     
     }
     ?>
