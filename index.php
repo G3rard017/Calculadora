@@ -26,29 +26,27 @@
 
     <?php
     if (isset($_POST['sumar'])) {
+         $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+
 
     if (isset($_POST['restar'])) 
+         $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
 
     if (isset($_POST['multiplicar'])) 
+         $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
 
     if (isset($_POST['dividir']))
+         $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
 
         // Obtener los valores de los campos del formulario
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
 
 
         //Realizar la suma
-        $suma=$num1 + $num2;
+        $resultado=$num1 + $num2;
 
         $resta =$num1 - $num2;
 
@@ -57,9 +55,9 @@
         $division=$num1 / $num2;
 
         //Mostrar el resultado
-        echo "<h3>El resultado de la suma es: $sumar</h3>";
+        echo "<h3>El resultado de la suma es: $suma</h3>";
 
-         echo "<h3>El resultado de la resta es: $restar</h3>";
+         echo "<h3>El resultado de la resta es: $resta</h3>";
 
           echo "<h3>El resultado de la multiplicacion es: $multiplicar</h3>";
 
