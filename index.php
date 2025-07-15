@@ -116,7 +116,7 @@
         if (isset($_GET['mult'])) {
             $num1 = $_GET['num1'];
             $num2 = $_GET['num2'];
-            $resultado = $num1 - $num2;
+            $resultado = $num1 * $num2;
 
 
             echo "<div class='resultado'>Resultado: $resultado</div>";
@@ -124,7 +124,7 @@
         if (isset($_GET['div'])) {
             $num1 = $_GET['num1'];
             $num2 = $_GET['num2'];
-            $resultado = $num1 - $num2;
+            $resultado = $num1 / $num2;
 
 
             echo "<div class='resultado'>Resultado: $resultado</div>";
