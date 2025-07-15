@@ -1,70 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Suma de dos números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+
+        .resultado {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #222;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
-    <h2>Formulario para sumar dos números</h2>
-    <form  method="post">
-        <label for="num1">Ingrese el primer número:</label>
-        <input type="number"name="num1"required><br><br>
-
-        <label for="num2">Ingrese el segundo número:</label>
-        <input type="number"name="num2"required><br><br>
-
-        <input type="submit"name="sumar" value="Sumar">
-
-        <input type="submit"name="restar" value="Restar">
-
-        <input type="submit"name="multiplicar" value="Multiplicar">
-
-        <input type="submit"name="dividir" value="Dividir">
-
-    </form>
-
-    <?php
-    if (isset($_POST['sumar'])) {
-         $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
+    <div class="form-container">
+        <h2>Suma de Dos Números</h2>
+        <form method="get">
+            <label for="num1">Primer número:</label>
+            <input type="number" name="num1" required>
 
 
-    if (isset($_POST['restar'])) 
-         $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-    if (isset($_POST['multiplicar'])) 
-         $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-    if (isset($_POST['dividir']))
-         $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-
-        // Obtener los valores de los campos del formulario
+            <label for="num2">Segundo número:</label>
+            <input type="number" name="num2" required>
 
 
-        //Realizar la suma
-        $resultado=$num1 + $num2;
+            <input type="submit" name="sumar" value="Calcular Suma"><br><br>
+            <input type="submit" name="restar" value="Calcular Resta"><br><br>
+            <input type="submit" name="mult" value="Calcular Multiplicación"><br><br>
+            <input type="submit" name="div" value="Calcular División"><br><br>
+        </form>
 
-        $resta =$num1 - $num2;
 
-        $multiplicacion =$num1 * $num2;
+        <?php
+        if (isset($_GET['sumar'])) {
+            $num1 = $_GET['num1'];
+            $num2 = $_GET['num2'];
+            $resultado = $num1 + $num2;
 
-        $division=$num1 / $num2;
 
-        //Mostrar el resultado
-        echo "<h3>El resultado de la suma es: $suma</h3>";
+            echo "<div class='resultado'>Resultado: $resultado</div>";
+        }
+        if (isset($_GET['restar'])) {
+            $num1 = $_GET['num1'];
+            $num2 = $_GET['num2'];
+            $resultado = $num1 - $num2;
 
-         echo "<h3>El resultado de la resta es: $resta</h3>";
 
-          echo "<h3>El resultado de la multiplicacion es: $multiplicar</h3>";
-
-           echo "<h3>El resultado de la division es: $dividir</h3>";
-    
-    }
-    ?>
-
+            echo "<div class='resultado'>Resultado: $resultado</div>";
+        }
+        ?>
+    </div>
 </body>
 </html>
